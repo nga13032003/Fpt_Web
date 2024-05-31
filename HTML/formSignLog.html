@@ -1,0 +1,713 @@
+<!-- Pham Nguyen Vu
+Login - Register - ForgotPass Table -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fptshop.com.vn | Điện thoại, Laptop, Tablets, Phụ kiện chính hãng giá tốt nhất</title>
+    <link href="../Assets/images/logo/fpt-logo-mini.png" rel="icon" type="image/x-icon">
+    <!-- icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../Assets/themify-icons/themify-icons.css" type="text/css">
+    <!-- css file link-->
+    <link rel="stylesheet" href="../SCSS/header.css">
+    <link rel="stylesheet" href="../CSS/signform.css">
+    <link rel="stylesheet" href="../CSS/slider.css">
+    <link rel="stylesheet" href="../CSS/responsive.css" type="text/css">
+    <link rel="stylesheet" href="../CSS/grid.css" type="text/css">
+    <link rel="stylesheet" href="../CSS/responsive_grid.css" type="text/css">
+    <!-- js -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- bootstrap 5-->
+    <link href="../Assets/bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="../Assets/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+
+<body>
+    <div id="header">
+        <div class="nav-bar">
+            <!-- mobile-nav -->
+            <!-- mobile navigation and some of features for customer-->
+            <div class="mobile-menu">
+                <i class="ti-menu menu-mobile-icon"></i>
+                <ul class="drop-list-item list-unstyled">
+                    <li class="bg-danger close-tag">
+                        <img src="../Assets/images/logo/fpt-logo-header.png" alt="logo"
+                            class="img-cls-hd w-50 float-start position-absolute">
+                        <i class="ti-close float-sm-end m-2 fs-3 close-list-icon"></i>
+                        <div class="clearfix"></div>
+                    </li>
+                    <li>
+                        <div class="accordion" id="accordionParent">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingZero">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseZero" aria-expanded="true"
+                                        aria-controls="collapseZero">
+                                        Thông tin hot
+                                    </button>
+                                </h2>
+                                <div id="collapseZero" class="accordion-collapse collapse" aria-labelledby="headingZero"
+                                    data-bs-parent="#accordionParent">
+                                    <div class="accordion-body">
+                                        <ul class="list-unstyled">
+                                            <li><a href="../HTML/index.html" id="mainPage" >Trang chủ</a></li>
+                                            <li><a href="https://fptshop.com.vn/gioi-thieu">Thông tin doanh nghiệp</a></li>
+                                            <li><a href="#" onclick="contactF()" class="contact-header">Liên hệ</a></li>
+                                            <li><a href="#" class="service-header">Dịch Vụ</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseParent" aria-expanded="true"
+                                        aria-controls="collapseParent">
+                                        Tài khoản của tôi
+                                    </button>
+                                </h2>
+                                <div id="collapseParent" class="accordion-collapse collapse"
+                                    aria-labelledby="headingOne" data-bs-parent="#accordionParent">
+                                    <div class="accordion-body">
+                                        <ul class="list-unstyled">
+                                            <li><a href="#">Cài đặt thông tin</a></li>
+                                            <li><a href="../HTML/formSignLog.html" >Đăng nhập</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- second accordion -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                        Bộ lọc
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                    data-bs-parent="#accordionParent">
+                                    <div class="accordion-body">
+                                        <div class="accordion" id="accordionFilter">
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="headingOne">
+                                                    <button class="accordion-button" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                                                        aria-expanded="true" aria-controls="collapseOne">
+                                                        Theo giá
+                                                    </button>
+                                                </h2>
+                                                <div id="collapseOne" class="accordion-collapse collapse"
+                                                    aria-labelledby="headingOne" data-bs-parent="#accordionFilter">
+                                                    <div class="accordion-body">
+                                                        <input type="checkbox" name="follow-cost" value="c1">Tăng
+                                                        dần<br>
+                                                        <input type="checkbox" name="follow-cost" value="c2">Giảm
+                                                        dần<br>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="headingTwo">
+                                                    <button class="accordion-button collapsed" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                                        aria-expanded="false" aria-controls="collapseTwo">
+                                                        Theo hãng
+                                                    </button>
+                                                </h2>
+                                                <div id="collapseTwo" class="accordion-collapse collapse"
+                                                    aria-labelledby="headingTwo" data-bs-parent="#accordionFilter">
+                                                    <div class="accordion-body">
+                                                        <select name="" id="">
+                                                            <option value="h1">Apple</option>
+                                                            <option value="h">Samsung</option>
+                                                            <option value="h3">Xiaomi</option>
+                                                            <option value="h4">Asus</option>
+                                                            <option value="h5">OPPO</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="headingThree">
+                                                    <button class="accordion-button collapsed" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                                        aria-expanded="false" aria-controls="collapseThree">
+                                                        Theo tỉnh thành
+                                                    </button>
+                                                </h2>
+                                                <div id="collapseThree" class="accordion-collapse collapse"
+                                                    aria-labelledby="headingThree" data-bs-parent="#accordionFilter">
+                                                    <div class="accordion-body">
+                                                        <select name="" id="">
+                                                            <option value="t1">Hà Nội</option>
+                                                            <option value="t2">TP.HCM</option>
+                                                            <option value="t3">Đà Nẵng</option>
+                                                            <option value="t4">Cần Thơ</option>
+                                                            <option value="t5">Hải phòng</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFour">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseFour" aria-expanded="true"
+                                        aria-controls="collapseFour">
+                                        Sản phẩm
+                                    </button>
+                                </h2>
+                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                                    data-bs-parent="#accordionParent">
+                                    <div class="accordion-body">
+                                        <ul class="list-unstyled">
+                                            <li><a href="#">Điện thoại</a></li>
+                                            <li><a href="#">Laptop</a></li>
+                                            <li><a href="#">PC - Phụ kiện</a></li>
+                                            <li><a href="#">Sim & thẻ</a></li>
+                                            <li><a href="#">Internet</a></li>
+                                            <li><a href="#">Apple</a></li>
+                                            <li><a href="#">Phụ kiện</a></li>
+                                            <li><a href="#">Máy cũ giá rẻ</a></li>
+                                            <li><a href="#">Đồ gia dụng</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFive">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseFive" aria-expanded="true"
+                                        aria-controls="collapseFive">
+                                        Thanh toán
+                                    </button>
+                                </h2>
+                                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                                    data-bs-parent="#accordionParent">
+                                    <div class="accordion-body">
+                                        <ul class="list-unstyled">
+                                            <li><a href="#">Cài đặt thanh toán</a></li>
+                                            <li><a href="#">Ví tiền</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <img class="logo-header" src="../Assets/images/logo/fpt-logo-header.png" alt="Logo">
+            <!-- nav - search -->
+            <div class="nav-search h-75">
+                <form class="d-flex h-100" action="#" method="GET">
+                    <input class="form-control h-100" type="search" placeholder="Tìm điện thoại, laptop, phụ kiện ..."
+                        aria-label="Search">
+                    <button class="btn btn-dark text-white" type="submit"><i
+                            class="ti-search position-relative fw-bolder m-1"></i></button>
+                </form>
+            </div>
+            <!-- contact-mobile -->
+            <div class="contact-mobile-header">
+                <div class="contact-mobile">
+                    <a href="tel: 1800 6601" class="text-white">
+                        Gọi miễn phí <br>
+                        <span class="fw-bold">1800 6601</span>
+                    </a>
+                </div>
+                <div class="shopping-cart-mobile">
+                    <a href="../HTML/cart-form.html" class="text-white">
+                        <i class="ti-shopping-cart">
+                            <p class="product-mount">
+                                <script>document.write(sessionStorage.getItem('pr-mount')==null?0:sessionStorage.getItem('pr-mount'))</script>
+                            </p>
+                        </i>
+                    </a>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="nav-customer">
+                <div class="cus-hot-news">
+                    <i class="ti-announcement"></i>
+                    <h4>Doanh nghiệp</h4>
+                    <ul class="list-unstyled drop-list-item navigation">
+                        <li><a href="../HTML/index.html" id="mainPage" >Trang chủ</a></li>
+                        <li><a href="https://fptshop.com.vn/gioi-thieu">Thông tin doanh nghiệp</a></li>
+                        <li><a href="#" onclick="contactF()" class="contact-header">Liên hệ</a></li>
+                        <li><a href="#" class="service-header">Dịch Vụ</a></li>
+                    </ul>
+                </div>
+                <div class="cus-abate" title="Phương thức thanh toán">
+                    <i class="ti-credit-card"></i>
+                    <h4>Thanh toán</h4>
+                </div>
+                <div class="cus-shopping-cart">
+                    <a href="../HTML/cart-form.html"  class="text-white">
+                        <i class="ti-shopping-cart">
+                            <p class="product-mount"><script>document.write(sessionStorage.getItem('pr-mount')==null?0:sessionStorage.getItem('pr-mount'))</script></p>
+                        </i>
+                    </a>
+                    <ul class="drop-list-item list-unstyled">
+                        <li><a href="#">Đã mua</a></li>
+                        <li><a href="../HTML/cart-form.html" >Hàng chờ</a></li>
+                    </ul>
+                    <h4>Giỏ hàng</h4>
+                </div>
+
+                <div class="cus-account" title="Tài khoản của bạn">
+                    <i class="ti-user"></i>
+                    <h4>Tài khoản</h4>
+                    <ul class="drop-list-item list-unstyled">
+                        <li><a href="#"><i class="ti-settings"
+                                    style="font-size: 18px;margin-top: 0px;"></i>&nbsp;&nbsp;&nbsp;Cài đặt thông tin</a>
+                        </li>
+                        <li><a href="../HTML/formSignLog.html"><i class="fa fa-sign-in"
+                                    style="font-size: 18px;margin-top: 0px;" ></i>&nbsp;&nbsp;&nbsp;Đăng nhập</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="product-bar">
+            <div class="portfolio-list">
+                <div class="phone">
+                    <a href="#"><i class="ti-mobile fs-5"></i> Điện thoại</a>
+                    <div class="product-summary-view">
+                        <div class="about-product">
+                            <div class="manufacture">
+                                <h4 class="text-left">Hãng sản xuất</h4>
+                                <ul class="manufacture-list list-unstyled">
+                                    <li><a href="#">Apple</a></li>
+                                    <li><a href="#">Samsung</a></li>
+                                    <li><a href="#">Xiaomi</a></li>
+                                    <li><a href="#">Nokia</a></li>
+                                    <li><a href="#">Redmi</a></li>
+                                    <li><a href="#">Vivo</a></li>
+                                    <li><a href="#">OPPO</a></li>
+                                    <li><a href="#">Asus</a></li>
+                                    <li><a href="#">Realme</a></li>
+                                </ul>
+                            </div>
+                            <div class="smart-lock">
+                                <h4 class="text-left">Đồng hồ thông minh</h4>
+                                <ul class="manufacture-list list-unstyled">
+                                    <li><a href="#">Apple Watch</a></li>
+                                    <li><a href="#">Samsung</a></li>
+                                    <li><a href="#">Xiaomi</a></li>
+                                    <li><a href="#">Huawei</a></li>
+                                    <li><a href="#">Redmi</a></li>
+                                    <li><a href="#">Amazon</a></li>
+                                    <li><a href="#">OPPO</a></li>
+                                    <li><a href="#">Garmin</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="level-cost list-unstyled">
+                            <h4 class="text-left">Mức giá</h4>
+                            <ul class="cost-list">
+                                <li><a href="#">Dưới 2 triệu</a></li>
+                                <li><a href="#">Từ 2 - 4 triệu</a></li>
+                                <li><a href="#">Từ 4 - 7 triệu</a></li>
+                                <li><a href="#">Từ 7 - 13 triệu</a></li>
+                                <li><a href="#">Trên 13 triệu</a></li>
+                            </ul>
+                        </div>
+                        <div class="best-selling">
+                            <div class="top-selling">
+                                <h4 class="text-left">Bán chạy nhất</h4>
+                                <div class="img-top-sell">
+                                    <a href="#"><img src="../Assets/images/header/SS-A34-best-Selling.jpg" alt=""></a>
+                                </div>
+                                <div class="descript-top-sell">
+                                    <a href="#">Samsung Galaxy A34 5G
+                                        128GB</a>
+                                    <p>6.990.000 <span style="text-decoration: underline;">đ</span></p>
+                                </div>
+                                <br><br>
+                                <div class="img-top-sell">
+                                    <a href="#"><img src="../Assets/images/header/Oppo-A57-best-Selling.jpg" alt=""></a>
+                                </div>
+                                <div class="descript-top-sell">
+                                    <a href="#">OPPO A57 4GB-128GB</a>
+                                    <p>4.590.000 <span style="text-decoration: underline;">đ</span></p>
+                                </div>
+                            </div>
+                            <div class="img-extra-selling">
+                                <a href="#"><img src="../Assets/images/header/galaxy-s22-extra-selling.png" alt=""></a>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- summary review: thong tin san pham ban chay-->
+                <div class="laptop">
+                    <a href="#"><i class="ti-layout-media-center-alt fs-5"></i> Laptop</a>
+                    <div class="product-summary-view">
+                        <div class="about-product">
+                            <div class="manufacture">
+                                <h4 class="text-left">Hãng sản xuất</h4>
+                                <ul class="manufacture-list list-unstyled">
+                                    <li><a href="#">Apple</a></li>
+                                    <li><a href="#">GigaByte</a></li>
+                                    <li><a href="#">Xiaomi</a></li>
+                                    <li><a href="#">Asus</a></li>
+                                    <li><a href="#">Window</a></li>
+                                    <li><a href="#">Vivo</a></li>
+                                    <li><a href="#">Masstel</a></li>
+                                    <li><a href="#">Asus</a></li>
+                                    <li><a href="#">Realme</a></li>
+                                </ul>
+                            </div>
+                            <div class="software smart-lock">
+                                <h4 class="text-left">Phần mềm</h4>
+                                <ul class="manufacture-list list-unstyled">
+                                    <li><a href="#">Diệt virus</a></li>
+                                    <li><a href="#">Windows</a></li>
+                                    <li><a href="#">Apple</a></li>
+                                    <li><a href="#">Microsoft Office</a></li>
+                                    <li><a href="#">Phần mềm khác</a></li>
+                                </ul>
+                            </div>
+                            <div class="software smart-lock">
+                                <h4 class="text-left">Máy in</h4>
+                                <ul class="manufacture-list list-unstyled">
+                                    <li><a href="#">HP</a></li>
+                                    <li><a href="#">Canon</a></li>
+                                    <li><a href="#">Brother</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="level-cost list-unstyled">
+                            <h4 class="text-left">Mức giá</h4>
+                            <ul class="cost-list">
+                                <li><a href="#">Dưới 5 triệu</a></li>
+                                <li><a href="#">Từ 5 - 10 triệu</a></li>
+                                <li><a href="#">Từ 10 - 15 triệu</a></li>
+                                <li><a href="#">Từ 20 - 25 triệu</a></li>
+                                <li><a href="#">Từ 25 - 30 triệu</a></li>
+                                <li><a href="#">Trên 30 triệu</a></li>
+                            </ul>
+                        </div>
+                        <div class="best-selling">
+                            <div class="img-extra-selling" style="margin-right: 50px;">
+                                <a href="#"><img src="../Assets/images/header/laptop-header-extra-selling.png"
+                                        alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="pc-item">
+                    <a href="#"><i class="ti-desktop fs-5"></i> Linh Kiện PC</a>
+                    <ul class="drop-list-item list-unstyled">
+                        <li><a href="#">PC</a></li>
+                        <li><a href="#">Linh Kiện</a></li>
+                        <li><a href="#">Màn Hình</a></li>
+                        <li><a href="#">Xây dựng PC</a></li>
+                    </ul>
+                </div>
+                <div class="internet">
+                    <a href="#"><i class="ti-rss-alt fs-5"></i> Internet</a>
+                    <ul class="drop-list-item list-unstyled">
+                        <li><a href="#">Lắp mạng</a></li>
+                        <li><a href="#">Thiết bị</a></li>
+                        <li><a href="#">Đăng ký 4G</a></li>
+                        <li><a href="#">Hỗ trợ</a></li>
+                    </ul>
+                </div>
+                <div class="apple">
+                    <a href="#"><i class="ti-apple fs-5"></i> Apple</a>
+                    <div class="product-summary-view">
+                        <div class="about-product">
+                            <div class="manufacture">
+                                <h4 class="text-left">Các sản phẩm Apple</h4>
+                                <ul class="manufacture-list list-unstyled">
+                                    <li><a href="#">Apple Watch</a></li>
+                                    <li><a href="#">Macbook</a></li>
+                                    <li><a href="#">iMac</a></li>
+                                    <li><a href="#">Mac Mini</a></li>
+                                    <li><a href="#">Mac Mini</a></li>
+                                    <li><a href="#">Ốp lưng & Bao da</a></li>
+                                    <li><a href="#">AirTag</a></li>
+                                    <li><a href="#">Redmi</a></li>
+                                    <li><a href="#">iphone</a></li>
+                                    <li><a href="#">iPad</a></li>
+                                    <li><a href="#">Apple Tai nghe</a></li>
+                                    <li><a href="#">Sạc & Cáp</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="best-selling">
+                            <div class="top-selling">
+                                <h4 class="text-left">Bán chạy nhất</h4>
+                                <div class="img-top-sell">
+                                    <a href="../HTML/detailsProduct.html" ><img
+                                            src="../Assets/images/header/iphone14-pro-best-selling.jpg" alt=""></a>
+                                </div>
+                                <div class="descript-top-sell">
+                                    <a href="../HTML/detailsProduct.html" >iPhone 14 Pro Max
+                                        128GB</a>
+                                    <p>27.190.000 <span style="text-decoration: underline;">đ</span></p>
+                                </div>
+                                <br><br>
+                                <div class="img-top-sell">
+                                    <a href="#"><img src="../Assets/images/header/iphone13-pro-best-selling.jpg"
+                                            alt=""></a>
+                                </div>
+                                <div class="descript-top-sell">
+                                    <a href="#">iPhone 13 128GB</a>
+                                    <p>17.390.000 <span style="text-decoration: underline;">đ</span></p>
+                                </div>
+                            </div>
+                            <div class="img-extra-selling">
+                                <a href="#"><img src="../Assets/images/header/ip14-promax-extra-selling.png" alt=""></a>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sim">
+                    <a href="#"><i class="ti-id-badge fs-5"></i> Thẻ & Sim</a>
+
+                </div>
+                <div class="items">
+                    <a href="#"><i class="ti-headphone fs-5"></i> Phụ kiện</a>
+                    <div class="product-summary-view">
+                        <div class="about-product">
+                            <div class="manufacture">
+                                <h4 class="text-left">Các sản phẩm phụ kiện</h4>
+                                <ul class="manufacture-list list-unstyled">
+                                    <li><a href="#">Router</a></li>
+                                    <li><a href="#">Thẻ nhớ</a></li>
+                                    <li><a href="#">Tai nghe</a></li>
+                                    <li><a href="#">Balo - Túi xách</a></li>
+                                    <li><a href="#">Chuột</a></li>
+                                    <li><a href="#">Phụ kiện Apple></a></li>
+                                    <li><a href="#">USB - Ổ cứng</a></li>
+                                    <li><a href="#">Sạc cáp</a></li>
+                                    <li><a href="#">Bàn ghế Gaming</a></li>
+                                    <li><a href="#">TV Box</a></li>
+                                    <li><a href="#">Phụ kiện khác</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="best-selling">
+                            <div class="top-selling">
+                                <h4 class="text-left">Bán chạy nhất</h4>
+                                <div class="img-top-sell">
+                                    <a href="#"><img src="../Assets/images/header/items-loudspeaker-best-selling.jpg"
+                                            alt=""></a>
+                                </div>
+                                <div class="descript-top-sell">
+                                    <a href="#">Combo Loa Bluetooth
+                                        Karaoke
+                                        Soundmax M22 + Mic không dây</a>
+                                    <p>1.845.000 <span style="text-decoration: underline;">đ</span></p>
+                                </div>
+                                <br><br>
+                                <div class="img-top-sell">
+                                    <a href="#"><img src="../Assets/images/header/items-fastcharge-best-selling.jpg"
+                                            alt=""></a>
+                                </div>
+                                <div class="descript-top-sell">
+                                    <a href="#">Pin sạc dự phòng
+                                        UmaTravel
+                                        10000mAh TRIP10000 Quick Charge</a>
+                                    <p>539.000 <span style="text-decoration: underline;">đ</span></p>
+                                </div>
+                            </div>
+                            <div class="img-extra-selling">
+                                <a href="#"><img src="../Assets/images/header/items-extra-selling.jpg" alt=""></a>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="old-product">
+                    <a href="#"><i class="ti-reload fs-5"></i> Máy cũ giá rẻ</a>
+
+                </div>
+                <div class="machine">
+                    <a href="#"><i class="ti-home fs-5"></i> Đồ gia dụng</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--  -->
+    <div id="wraper">
+        <h2 class="title">Đăng nhập</h2>
+        <div class="form-box ">
+            <form action="#">
+                <div class="input-box">
+                    <i class="ti-email icon"></i>
+                    <input id="email-login" type="email" required>
+                    <label>Email</label>
+
+                </div>
+                <div class="input-box">
+                    <i class="ti-lock icon"></i>
+                    <input id="password-login" type="password" required>
+                    <label>Mật khẩu</label>
+                </div>
+
+                <div class="container">
+                    Ghi nhớ đăng nhập &nbsp<input type="checkbox">
+                    <a href="#" class="rt-forgotpassword">Quên mật khẩu?</a>
+                </div>
+                <button class="btn btn-block btn-danger fs-3 handle-button">Đăng Nhập</button>
+                <p class="note-register fs-4" style="text-align: center;">Nếu như bạn chưa có tài khoản <a href="#"
+                        class="rt-register">Đăng ký ngay!</a></p>
+            </form>
+        </div>
+    </div>
+
+    <div id="register">
+        <i class="ti-close icon-close"></i>
+        <h2 class="title">Đăng Ký</h2>
+        <div class="form-box ">
+            <form action="#">
+                <div class="input-box">
+                    <i class="ti-user icon"></i>
+                    <input id="name-reg" type="text" required>
+                    <label>Họ tên người dùng</label>
+                </div>
+                <div class="input-box">
+                    <i class="ti-email icon"></i>
+                    <input id="email-reg" type="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <i class="ti-lock icon"></i>
+                    <input id="password-reg" type="password" required>
+                    <label>Mật khẩu</label>
+                </div>
+                <div class="input-box">
+                    <i class="ti-lock icon"></i>
+                    <input id="Repassword-reg" type="password" required>
+                    <label>Nhập lại mật khẩu</label>
+                </div>
+                <div class="container">
+                    Chấp nhận <a href="#">chính sách</a>&nbsp<input type="checkbox" id="policy-reg">
+                </div>
+                <button class="btn btn-block btn-danger fs-3 handle-button">Đăng Ký</button>
+                <p class="note-register fs-4" style="text-align: center; margin: 10px 0px;">Bạn đã có tài khoản <a
+                        href="#" class="rt-login">Đăng nhập ngay!</a></p>
+            </form>
+        </div>
+    </div>
+
+
+    <div id="forgot-password" class="first my-5">
+        <i class="ti-close icon-close"></i>
+        <h2 class="title">Quên mật khẩu</h2>
+        <div class="form-box ">
+            <form action="../HTML/index.html">
+                <div class="input-box">
+                    <i class="ti-email icon"></i>
+                    <input type="email" class="email-user email" autocomplete="on" required>
+                    <label>Email</label>
+                </div>
+                <button class="btn btn-block btn-danger fs-3 handle-button">Tiếp tục</button>
+                <p class="note-register fs-4" style="text-align: center; margin: 10px 0px;">Bạn đã có tài khoản <a
+                        href="#" class="rt-login">Đăng nhập ngay!</a></p>
+            </form>
+        </div>
+    </div>
+
+    <div id="forgot-password" class="second">
+        <i class="ti-close icon-close"></i>
+        <h2 class="title">Quên mật khẩu</h2>
+        <div class="form-box ">
+            <form action="#">
+                <div style="text-align: center;" class="font-bold">
+                    <i class="ti-user fs-1" style="font-size: 1.5em; font-weight: 500;"></i>
+                    <p class="wellcome-user" style="margin-top: 10px;">Chào mừng quay trở lại</p>
+                    <p class="countdow-OTP">Mã OTP đã gửi tới bạn Có hiệu lực trong vòng</p>
+                </div>
+
+                <div class="input-box">
+                    <i class="ti-key icon"></i>
+                    <input type="text" id="OTP" required>
+                    <label>Nhập OTP</label>
+                    <br>
+                    <span class="errOTP fs-4 text-danger text-left m-2"></span>
+                </div>
+                <button class="btn btn-block btn-danger handle-button fs-3">Tiếp tục</button>
+
+            </form>
+        </div>
+    </div>
+
+    <div id="forgot-password" class="third">
+        <i class="ti-close icon-close"></i>
+        <h2 class="title">Quên mật khẩu</h2>
+        <div class="form-box ">
+            <form action="#">
+                <div class="input-box">
+                    <i class="ti-lock icon"></i>
+                    <input id="password-qmk" type="password" required>
+                    <label>Mật khẩu Mới</label>
+                </div>
+                <div class="input-box">
+                    <i class="ti-lock icon"></i>
+                    <input id="repassword-qmk" type="password" required>
+                    <label>Nhập Lại Mật khẩu</label>
+                </div>
+                <button class="btn btn-block btn-danger fs-3 handle-button">Tiếp tục</button>
+
+            </form>
+        </div>
+    </div>
+    <div id="contact" class="contact">
+        <i class="ti-close icon-close"></i>
+        <h2 class="title">Liên Hệ</h2>
+        <div class="row_padding32">
+            <div class="address">
+                <i class="ti-location-pin icon"></i>
+                &nbsp &nbsp Viet Nam, VNA<br>
+                <i class="ti-mobile icon"></i>
+                &nbsp &nbsp Phone: +84 34328540 <br>
+                <i class="ti-email icon"></i>
+                &nbsp &nbsp Email: phamnguyenvu287@gmail.com<br>
+            </div>
+
+            <div class="information">
+                <form target="_blank">
+                    <div class="haft">
+                        <input type="text" placeholder="Name" class="name-space-if">
+                        &nbsp
+                        <input type="text" placeholder="Email" class="email-space-if">
+                    </div>
+                    <input type="text" style="width: 100%;" placeholder="Message" class="message-space-if">
+                </form>
+                <button class="send">SEND</button>
+            </div>
+        </div>
+
+
+        <div class="footer">
+            <div class="endfooter">
+                <a href="https://www.instagram.com/vuzpham287/" target="_blank"><i class="ti-instagram icon"></i></a>
+                <a href="https://www.facebook.com/phamnguyen.vu.106" target="_blank"><i
+                        class="ti-facebook icon"></i></a>
+                <a href=""><i class="ti-google icon"></i></a>
+                <a href="https://github.com/VuzPham" target="_blank"><i class="ti-github icon"></i></a>
+                <a href=""><i class="ti-twitter-alt icon"></i></a>
+                <p style="margin-top: 10px;">Powered by Techsee</p>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../JS/sign_log.js"></script>
+<script src="../JS/product.js"></script>
+
+</html>

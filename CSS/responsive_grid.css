@@ -1,0 +1,22 @@
+/* mobile */
+@media (width < 768px)
+{
+    .nav-bar{
+        display: grid;
+        grid-template-columns: 10% 7% 48% 35%;
+        grid-template-rows: 100%;
+        grid-gap: 0px;
+    }
+    .nav-search{
+        grid-column: 3; 
+    }
+    .nav-mobile{
+        grid-column: 1;
+    }
+    .logo-header{
+        grid-column: 2;
+    }
+    .contact-mobile-header{
+        grid-column: 4;
+    }
+}
